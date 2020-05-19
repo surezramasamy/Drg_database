@@ -18,6 +18,7 @@ class Material(models.Model):
 class Item_Detail(models.Model):
     Model_Name = models.ForeignKey(Model_Name,on_delete=models.CASCADE,null=True)
     Sub_Assembly_Name = models.ForeignKey(Sub_Assembly,on_delete=models.CASCADE,null=True)
+    Child_part = models.CharField(max_length=256,null=True)
     Size = models.CharField(max_length=256,null=True)
     Raw_Material = models.ForeignKey(Material,on_delete=models.CASCADE,null=True)
     Drawing1 = models.FileField(blank=True,null=True)

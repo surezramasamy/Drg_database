@@ -20,8 +20,8 @@ class BookAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     class Meta:
         model = Item_Detail
     list_display = ['Model_Name','Sub_Assembly_Name','Size','Raw_Material','Drawing1','Drawing2','Photo1','Photo2','Process_Instructions']
-    search_fields = ['Model_Name','Sub_Assembly_Name']
-    list_filter = ['Model_Name','Sub_Assembly_Name']
+    search_fields = ['Model_Name','Sub_Assembly_Name','Child_part']
+    list_filter = ['Model_Name','Sub_Assembly_Name','Child_part']
 
 
 
